@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Page Title</title>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/calculator.css">
+<link rel="stylesheet" href="../css/convertor.css">
+<link rel="stylesheet" href="../css/footer.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="../js/calculator.js"></script> 
+<script src="../js/convertor.js"></script> 
+</head>
+<body>
+
+<div class="header">
+  <img src="../image/logo (3).png" width="180px" height="auto"  style="float:LEFT ;margin-top: -20px;">
+  <h1>EduConvert</h1>
+  <p style="margin-top: -30px;">For All Dreams</p>
+</div>
+
+<div class="navbar">
+  <a href="#" class="active">Home</a>
+  <a href="#">Link</a>
+  <a href="#">Link</a>
+  <a href="#" class="right">Link</a>
+</div>
+
+<div class="row" style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+  <div class="side">
+    <h3><i class='fas fa-certificate' style="color:#0074D9;"></i> Arithmatic Calculator</h3>
+   
+    <div class="fakeimg" style="height:480px;">
+
+      <br>
+    
+      <center><table class="calculator">
+        <tr>
+          <td colspan="3"><input type="text" id="result" placeholder="Enter Value..." class="display" style="background-color:white;font-size: 13px;"></td>
+          <td style="padding: 10px;"><input type="button" value="C" onclick="clearAll()" style="background-color:#0074D9;color:white"> </td>
+        </tr>
+        <tr>
+          <td  style="padding: 10px;"><input type="button" value="7" onclick="display('7')"></td>
+          <td style="padding: 10px;"><input type="button" value="8" onclick="display('8')"></td>
+          <td style="padding: 10px;"><input type="button" value="9" onclick="display('9')"></td>
+          <td style="padding: 10px;"><input type="button" value="/" onclick="display('/')" style="background-color:#0074D9;color:white"></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px;"><input type="button" value="4" onclick="display('4')"></td>
+          <td style="padding: 10px;"><input type="button" value="5" onclick="display('5')"></td>
+          <td style="padding: 10px;"><input type="button" value="6" onclick="display('6')"></td>
+          <td style="padding: 10px;"><input type="button" value="*" onclick="display('*')" style="background-color:#0074D9;color:white"></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px;"><input type="button" value="1" onclick="display('1')"></td>
+          <td style="padding: 10px;"><input type="button" value="2" onclick="display('2')"></td>
+          <td style="padding: 10px;"><input type="button" value="3" onclick="display('3')"></td>
+          <td style="padding: 10px;"><input type="button" value="-" onclick="display('-')" style="background-color:#0074D9;color:white"></td>
+        </tr>
+        <tr>
+          <td style="padding: 10px;"><input type="button" value="0" onclick="display('0')"></td>
+          <td style="padding: 10px;"><input type="button" value="." onclick="display('.')"></td>
+          <td style="padding: 10px;"><input type="button" value="+" onclick="display('+')" style="background-color:#0074D9;color:white"></td>
+          <td style="padding: 10px;"><input type="button" value="DEL" onclick="dele()" style="background-color:#0074D9;color:white"></td>
+        </tr>
+        <tr>
+          <td colspan="4"><input type="button" value="=" onclick="calculate()" style="background-color:#0074D9;color:white"> </td>
+        </tr>
+      </table></center>
+    </div>
+    <p><i class='fas fa-angle-double-right' style="color:#0074D9;"></i> This is a simple basic calculator with Arithmatic Operations.
+       Use this basic calculator online for math with addition, subtraction, division and multiplication.</p>
+    <h3><i class='fas fa-certificate' style="color:#0074D9;"></i> Temperature Converter</h3>
+
+    <div class="fakeimg" style="height:265px;">
+      
+      <table>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Fahrenheit (℉) : <input type="number" id="Fahrenheit" style="border-radius:5px;" placeholder="Enter Fahrenheit value" oninput="FahrenheitConverter(this.value)" onchange="temperatureConverter(this.value)"></td>   
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Celsius (℃):<input type="number" id="Celcius" style="border-radius:5px;" placeholder="Enter Celsius value" oninput="CelciusConverter(this.value)" onchange="CelciusConverter(this.value)"> </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Kelvin (K):<input type="number" id="Kelvin" style="border-radius:5px;" placeholder="Enter Kelvin value" oninput="KelvinConverter(this.value)" onchange="KelvinConverter(this.value)"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="submitbtn" value="R" onclick="Temperature_reset()" style="width: 30%;border-radius: 90px;float: right;"></td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Fahrenheit to Celsius	℃ = (℉-32) / 1.8</p>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i>  Fahrenheit to Kelvin	K=((℉-32)/1.8)+273.15</p>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Celsius to Fahrenheit	℉=(℃*1.8)+32</p>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Celsius to Kelvin	K=℃+273.15</p>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Kelvin to Fahrenheit	℉=((K-273.15)*1.8)+32</p>
+      <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Kelvin to Celsius	℃=K-273.15</p>
+    </div>
+    <h3><i class='fas fa-certificate' style="color:#0074D9;"></i> Weight Converter</h3>
+    <div class="fakeimg" style="height:460px;">
+      <table>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Grams (g) : <input type="number" id="Grams" style="border-radius:5px;" placeholder="Enter Grams value" oninput="GramsConverter(this.value)" onchange="temperatureConverter(this.value)"></td>   
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Kilograms (kg) :<input type="number" id="Kilograms" style="border-radius:5px;" placeholder="Enter Kilograms value" oninput="KilogramsConverter(this.value)" onchange="KilogramsConverter(this.value)"> </td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Milligrams (mg) :<input type="number" id="Milligrams" style="border-radius:5px;" placeholder="Enter Milligrams value" oninput="MilligramsConverter(this.value)" onchange="KelvinConverter(this.value)"></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Pounds (lb) :<input type="number" id="Pounds" style="border-radius:5px;"  placeholder="Enter Pounds value" oninput="PoundsConverter(this.value)" onchange="KelvinConverter(this.value)"></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Ounces (oz) :<input type="number" id="Ounces" style="border-radius:5px;" placeholder="Enter Ounces value" oninput="OuncesConverter(this.value)" onchange="KelvinConverter(this.value)"></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-hand-o-right" style="color:#0074D9;"></i> Stones (st) :<input type="number" id="Stones" style="border-radius:5px;" placeholder="Enter Stones value" oninput="StonesConverter(this.value)" onchange="KelvinConverter(this.value)"></td>
+        </tr>
+        <tr>
+          <td><input type="submit" name="submitbtn" value="R" onclick="weight_reset()" style="width: 15%;border-radius:15px;float: right;"></td>
+        </tr>
+      </table>
+    </div>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Pounds to Kilograms kg = lb/2.2046</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Pounds to Ounces	oz = lb*16</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> pounds to Grams	g = b/0.0022046</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Pounds to Stones	st = lb*0.071429</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Pounds to Milligrams mg = lb*453592</p> 
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i>  Kilograms to Pounds	lb = kg*2.2046</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i>  Kilograms to Ounces	oz = kg*35.274</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Kilograms to Grams	g = kg*1000</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Kilograms to Stones	st = kg*0.1574</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Kilograms to Milligrams mg = kg*1000000</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Ounces to Pounds	lb = oz*0.0625</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Ounces to Kilograms	kg =oz/35.274</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Ounces to Grams	g = oz/0.035274</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Ounces to Stones	st = oz*0.0044643</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Ounces to Milligrams mg = oz*28349.5344648</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Grams to Pounds	lb = g*0.0022046</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Grams to Kilograms	kg = g/1000</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Grams to Ounces	oz = g*0.035274</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Grams to Stones	st = g*0.00015747</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Grams to Milligrams mg = g*1000</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Stones to Pounds	lb = st*14</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Stones to Kilograms	kg = st/0.15747</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Stones to Ounces	oz = st*224</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Stones to Grams	g = st/0.00015747</p>
+    <p style="font-size: 15px;"><i class="fa fa-check-circle-o" style="color:#0074D9;"></i> Stones to Milligrams mg = st*6350293.18</p>
+
+    <div class="fakeimg" style="height:60px;">Image</div>
+  </div>
+  <div class="main">
+    <h3><i class='fas fa-certificate' style="color:#0074D9;"></i> Binary, Decimal, Hexadecimal, Octal Convertor</h3>
+   
+    <div class="fakeimg" style="height:400px;">
+      <table>
+       <tr>
+          <td style="padding-top: 15px;"><i class="fa fa-circle" style="color:#0074D9;"></i> Decimal Number:<input type="Number" placeholder="Enter decimal value" name="decimal" id="decimal"></td>
+          <td style="padding-top: 15px;"><center><input type="submit" name="submitbtn" value="C" onclick="decimalconvert()">  <input type="submit" name="submitbtn" value="R" onclick="decimalreset()"></center></td>
+          <td style="padding-top: 15px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Binary Number:<input type="text" disabled id="binary"></td>
+          <td style="padding-top: 15px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Hex Number:<input type="text" disabled id="hex"></td>
+          <td style="padding-top: 15px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Octal Number:<input type="text" disabled id="octal"></td>
+        </tr>
+        
+        <tr>
+          <td style="padding-top: 20px;"><i class="fa fa-circle" style="color:#0074D9;"></i> Binary Number:<input type="Number" placeholder="Enter binary value(1/0)" name="binary" id="binary1"></td>
+          <td style="padding-top: 20px;"><center><input type="submit" name="submitbtn" value="C" onclick="binaryconvert()">  <input type="submit" name="submitbtn" value="R" onclick="binaryreset()"></center></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Decimal Number:<input type="text" disabled id="decimal1"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Hex Number:<input type="text" disabled id="hex1"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Octal Number:<input type="text" disabled id="octal1"></td>
+        </tr>
+        <tr>
+          <td style="padding-top: 20px;"><i class="fa fa-circle" style="color:#0074D9;"></i> Hex Number:<input type="text" placeholder="Enter Hexadecimal value" name="hex" id="hex16" style="background-color:white;font-size: 13px;"></td>
+          <td style="padding-top: 20px;"><center><input type="submit" name="submitbtn" value="C" onclick="hexconvert()">  <input type="submit" name="submitbtn" value="R" onclick="hexreset()"></center></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Binary Number:<input type="text" disabled id="binary16"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Decimal Number:<input type="text" disabled id="decimal16"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Octal Number:<input type="text" disabled id="octal16"></td>
+        </tr>
+        <tr>
+          <td style="padding-top: 20px;"><i class="fa fa-circle" style="color:#0074D9;"></i> Octal Number:<input type="Number" placeholder="Enter octal value" name="octal" id="octal8"></td>
+          <td style="padding-top: 20px;"><center><input type="submit" name="submitbtn" value="C" onclick="octalconvert()">  <input type="submit" name="submitbtn" value="R" onclick="octalreset()"></center></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Binary Number:<input type="text" disabled id="binary8"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Hex Number:<input type="text" disabled id="hex8"></td>
+          <td style="padding-top: 20px;"><i class="fa fa-hand-o-down" style="color:#0074D9"></i> Decimal Number:<input type="text" disabled id="decimal8"></td>
+        </tr>
+      </table>
+      
+      
+    </div>
+    <h4><i class='fas fa-bell' style="color:#0074D9;"></i> Instruction :</h4>
+    <ul style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+      <li>Enter the Binary or Decimal or Hexadecimal or Octal number you want to be changed into the relevent space.</li>
+      <li>Click 'C' button and you can get answers.</li>
+      <li>If you enter invalid value, you can get answers as 'NoN'.</li>
+      <li>If you want to reset values, click the 'R' button. </li>
+  </ul>
+  <h3>Converting from Decimal to Binary and Hexadecimal and Octal:</h3>
+
+  <img src="../image/10-2.jpg" width="160px" height="auto"  style="float:LEFT ;">
+  <img src="../image/10-16.jpg" width="240px" height="auto" style="padding-left: 40PX;padding-top: 2px;float:LEFT ">
+  <img src="../image/10-8.jpg" width="200px" height="auto" style="padding-left: 40PX;padding-top: 2px;">
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <br>
+    <h2>TITLE HEADING</h2>
+    <h5>Title description, Sep 2, 2017</h5>
+    <div class="fakeimg" style="height:200px;">Image</div>
+    <p>Some text..</p>
+    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container bottom_border">
+  
+<p style="color:black;font-size: 15px;float: left;font-family:Arial Narrow;letter-spacing:4px;padding-top: 8px;" >Copyright @2022 | Designed With by <a href="#" style="color:#0074D9 ; text-decoration:none;">Chamaththa Shamod</a></p>
+<div style="float:right;padding-right: 30px;font-size: 18px;padding-bottom: 5px;">
+  <br><a  href="#"><i class="fab fa-facebook-f fleft padding-right" style="color:#545555;padding-right: 30px"></i></a>
+  <a href="#"><i class="fab fa-twitter fleft padding-right" style="color:#545555;padding-right: 30px"></i> </a>
+  <a href="#"><i class="fab fa-linkedin fleft padding-right" style="color:#545555;padding-right: 30px"></i> </a>
+  <a href="#"><i class="fab fa-instagram fleft padding-right" style="color:#545555;padding-right: 30px"></i> </a>
+</div>
+  </div>
+  
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+input[type=number] {
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+    color: rgb(7, 7, 243);
+    border: solid rgb(128, 121, 121) 0.5px;
+    width: 100%;
+    border-radius: 25px;
+    height: 70%;
+    font-size: 13px;
+    padding:8px;
+    }
+
+    input[type=text] {
+        font-family: 'Orbitron', sans-serif;
+        text-align: center;
+       background-color: rgb(146, 177, 219);
+        border: solid rgb(128, 121, 121) 0.5px;
+        width: 100%;
+        border-radius: 25px;
+        height: 70%;
+        font-size: 13px;
+        padding:8px;
+        color: rgb(32, 31, 31);
+        font-size: 16px;
+        }
+
+        input[type=submit] {
+            font-family: 'Orbitron', sans-serif;
+            text-align: center;
+            border: solid rgb(128, 121, 121) 0.5px;
+            width: 100%;
+            border-radius: 60px;
+            font-size: px;
+            padding: 8px;
+            }

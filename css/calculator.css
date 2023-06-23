@@ -15,7 +15,7 @@ box-shadow: rgba(65, 64, 64, 0.678) 2px 1px 5px, rgba(158, 157, 157, 0.486) 2px 
     padding: 10px;
     border-radius: 1em;
     height: 340px;
-    width: 95%;
+    width: 30%;
     margin: auto;
     background-color: #fffbfb;
     color:white;
@@ -32,3 +32,4 @@ box-shadow: rgba(65, 64, 64, 0.678) 2px 1px 5px, rgba(158, 157, 157, 0.486) 2px 
         height: 70%;
         padding:12px;
         }
+

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/calculator.css" />
+    <link rel="stylesheet" href="../css/convertor.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../js/calculator.js"></script>
+    <script src="../js/convertor.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <img
+        src="../image/logo (3).png"
+        width="180px"
+        height="auto"
+        style="float: LEFT; margin-top: -20px"
+      />
+      <h1>EduConvert</h1>
+      <p style="margin-top: -30px">For All Dreams</p>
+    </div>
+
+    <div class="navbar">
+      <a href="#" class="active">Home</a>
+      <a href="#">Quizes</a>
+      <a href="#">Link</a>
+      <a href="#" class="right">Link</a>
+    </div>
+
+   
+           
+   <div style="margin-left: 160px;margin-right: 160px;">
+    <h2>Calculator Categories</h2>
+    <br><br>
+    <a><i class='fas fa-angle-double-right'></i> Binary , Decimal , Hexadecimal ,Octal Converter</a><br><br>
+    <a><i class='fas fa-angle-double-right'></i> Weight Converter</a><br><br>
+    <a><i class='fas fa-angle-double-right'></i> Temperature Converter</a><br><br>
+   </div>
+
+   <hr>
+   <div style="margin-left: 60px;margin-right: 60px;">
+    
+    <h2>Arithmatic Calculator</h2>
+    <center>
+        <table class="calculator">
+          <tr>
+            <td colspan="3">
+              <input
+                type="text"
+                id="result"
+                placeholder="Enter Value..."
+                class="display"
+                style="background-color: white; font-size: 13px"
+              />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="C"
+                onclick="clearAll()"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px">
+              <input type="button" value="7" onclick="display('7')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="8" onclick="display('8')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="9" onclick="display('9')" />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="/"
+                onclick="display('/')"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px">
+              <input type="button" value="4" onclick="display('4')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="5" onclick="display('5')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="6" onclick="display('6')" />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="*"
+                onclick="display('*')"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px">
+              <input type="button" value="1" onclick="display('1')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="2" onclick="display('2')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="3" onclick="display('3')" />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="-"
+                onclick="display('-')"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 10px">
+              <input type="button" value="0" onclick="display('0')" />
+            </td>
+            <td style="padding: 10px">
+              <input type="button" value="." onclick="display('.')" />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="+"
+                onclick="display('+')"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+            <td style="padding: 10px">
+              <input
+                type="button"
+                value="DEL"
+                onclick="dele()"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <input
+                type="button"
+                value="="
+                onclick="calculate()"
+                style="background-color: #0074d9; color: white"
+              />
+            </td>
+          </tr>
+        </table>
+      </center>
+<br>
+      <p>Calculator with addition, substraction ,multiply and divide buttons. Operate calculator with a mouse, number pad, keyboard, or touch.</p>
+      <p>See additional instructions on the Basic Calculator Page.</p>
+   </div>
+   
+   <br>
+    <footer class="footer">
+      <div class="container bottom_border">
+        <p
+          style="
+            color: black;
+            font-size: 15px;
+            float: left;
+            font-family: Arial Narrow;
+            letter-spacing: 4px;
+            padding-top: 8px;
+          "
+        >
+          Copyright @2022 | Designed With by
+          <a href="#" style="color: #0074d9; text-decoration: none"
+            >Chamaththa Shamod</a
+          >
+        </p>
+        <div
+          style="
+            float: right;
+            padding-right: 30px;
+            font-size: 18px;
+            padding-bottom: 5px;
+          "
+        >
+          <br /><a href="#"
+            ><i
+              class="fab fa-facebook-f fleft padding-right"
+              style="color: #545555; padding-right: 30px"
+            ></i
+          ></a>
+          <a href="#"
+            ><i
+              class="fab fa-twitter fleft padding-right"
+              style="color: #545555; padding-right: 30px"
+            ></i>
+          </a>
+          <a href="#"
+            ><i
+              class="fab fa-linkedin fleft padding-right"
+              style="color: #545555; padding-right: 30px"
+            ></i>
+          </a>
+          <a href="#"
+            ><i
+              class="fab fa-instagram fleft padding-right"
+              style="color: #545555; padding-right: 30px"
+            ></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

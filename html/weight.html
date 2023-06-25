@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Page Title</title>
+    <meta charset="UTF-8" />
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/calculator.css" />
+    <link rel="stylesheet" href="../css/convertor.css" />
+    <link rel="stylesheet" href="../css/footer.css" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="../js/calculator.js"></script>
+    <script src="../js/convertor.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <img src="../image/logo (3).png" width="180px" height="auto" style="float: LEFT; margin-top: -20px" />
+        <h1>EduConvert</h1>
+        <p style="margin-top: -30px">For All Dreams</p>
+    </div>
+
+    <div class="navbar">
+        <a href="#" class="active">Home</a>
+        <a href="#">Quizes</a>
+        <a href="#">Link</a>
+        <a href="#" class="right">Link</a>
+    </div>
+
+
+
+    <div style="margin-left: 60px;margin-right: 60px;">
+        <br>
+        <div class="row">
+            <div class="column">
+                <h3>
+                    <i class="fas fa-certificate" style="color: #0074d9"></i> Weight
+                    Converter
+                </h3>
+                <div class="fakeimg" style="height: 480px;width: 80%;">
+                    <table>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i> Grams
+                                (g) :
+                                <input type="number" id="Grams" style="border-radius: 5px"
+                                    placeholder="Enter Grams value" oninput="GramsConverter(this.value)"
+                                    onchange="temperatureConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i>
+                                Kilograms (kg) :<input type="number" id="Kilograms" style="border-radius: 5px"
+                                    placeholder="Enter Kilograms value" oninput="KilogramsConverter(this.value)"
+                                    onchange="KilogramsConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i>
+                                Milligrams (mg) :<input type="number" id="Milligrams" style="border-radius: 5px"
+                                    placeholder="Enter Milligrams value" oninput="MilligramsConverter(this.value)"
+                                    onchange="KelvinConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i> Pounds
+                                (lb) :<input type="number" id="Pounds" style="border-radius: 5px"
+                                    placeholder="Enter Pounds value" oninput="PoundsConverter(this.value)"
+                                    onchange="KelvinConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i> Ounces
+                                (oz) :<input type="number" id="Ounces" style="border-radius: 5px"
+                                    placeholder="Enter Ounces value" oninput="OuncesConverter(this.value)"
+                                    onchange="KelvinConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <i class="fa fa-hand-o-right" style="color: #0074d9"></i> Stones
+                                (st) :<input type="number" id="Stones" style="border-radius: 5px"
+                                    placeholder="Enter Stones value" oninput="StonesConverter(this.value)"
+                                    onchange="KelvinConverter(this.value)" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" name="submitbtn" value="R" onclick="weight_reset()"
+                                    style="width: 15%; border-radius: 15px; float: right" />
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Pounds to
+                    Kilograms kg = lb/2.2046
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Pounds to
+                    Ounces oz = lb*16
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> pounds to
+                    Grams g = b/0.0022046
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Pounds to
+                    Stones st = lb*0.071429
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Pounds to
+                    Milligrams mg = lb*453592
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Kilograms
+                    to Pounds lb = kg*2.2046
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Kilograms
+                    to Ounces oz = kg*35.274
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Kilograms
+                    to Grams g = kg*1000
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Kilograms
+                    to Stones st = kg*0.1574
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Kilograms
+                    to Milligrams mg = kg*1000000
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Ounces to
+                    Pounds lb = oz*0.0625
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Ounces to
+                    Kilograms kg =oz/35.274
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Ounces to
+                    Grams g = oz/0.035274
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Ounces to
+                    Stones st = oz*0.0044643
+                </p>
+                <p style="font-size: 15px">
+                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Ounces to
+                    Milligrams mg = oz*28349.5344648
+                </p>
+                
+
+                
+            </div>
+            <div class="column">
+                <h3>How to Convert Units of Weight</h3>
+                <p>Conversions are performed by using a conversion factor.
+                     By knowing the conversion factor, converting between units can become a simple multiplication problem:</p>
+
+                     <p><b>S * C = E</b></p>
+
+                     <p>Where <b>S</b> is our starting value, <b>C</b> is our conversion factor, and <b>E</b>
+                         is our end converted result.</p>
+
+                         <p>To simply convert from any unit into grams, for example, from 5 kilograms, 
+                            just multiply by the conversion value in the right column in the table below</p>
+
+                            <center><p>5 kg * 1000 [ (g) / (kg) ] = 5000 g</p></center>
+
+                            <p>To convert from g into units in the left column divide by the value in the right
+                                 column or, multiply by the reciprocal, 1/x.</p>
+                                 <center><p>5000 g / 1000  [ (g) / (kg) ] = 5 kg</p></center>
+<br><br><br>
+                                 <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Grams to
+                                    Pounds lb = g*0.0022046
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Grams to
+                                    Kilograms kg = g/1000
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Grams to
+                                    Ounces oz = g*0.035274
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Grams to
+                                    Stones st = g*0.00015747
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Grams to
+                                    Milligrams mg = g*1000
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Stones to
+                                    Pounds lb = st*14
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Stones to
+                                    Kilograms kg = st/0.15747
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Stones to
+                                    Ounces oz = st*224
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Stones to
+                                    Grams g = st/0.00015747
+                                </p>
+                                <p style="font-size: 15px">
+                                    <i class="fa fa-check-circle-o" style="color: #0074d9"></i> Stones to
+                                    Milligrams mg = st*6350293.18
+                                </p>
+            </div>
+        </div>
+        
+    </div>
+    </div>
+    <br>
+    <footer class="footer">
+        <div class="container bottom_border">
+            <p style="
+            color: black;
+            font-size: 15px;
+            float: left;
+            font-family: Arial Narrow;
+            letter-spacing: 4px;
+            padding-top: 8px;
+          ">
+                Copyright @2022 | Designed With by
+                <a href="#" style="color: #0074d9; text-decoration: none">Chamaththa Shamod</a>
+            </p>
+            <div style="
+            float: right;
+            padding-right: 30px;
+            font-size: 18px;
+            padding-bottom: 5px;
+          ">
+                <br /><a href="#"><i class="fab fa-facebook-f fleft padding-right"
+                        style="color: #545555; padding-right: 30px"></i></a>
+                <a href="#"><i class="fab fa-twitter fleft padding-right"
+                        style="color: #545555; padding-right: 30px"></i>
+                </a>
+                <a href="#"><i class="fab fa-linkedin fleft padding-right"
+                        style="color: #545555; padding-right: 30px"></i>
+                </a>
+                <a href="#"><i class="fab fa-instagram fleft padding-right"
+                        style="color: #545555; padding-right: 30px"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
